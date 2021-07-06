@@ -13,13 +13,15 @@ def press(num):
     equation.set(expression)
 def clear():
     global equation
+    global expression
+    expression=''
     equation.set('')
 def equalpress():
     try:
         global expression
         total = str(eval(expression))
         equation.set(total)
-        expression = ""
+        expression = total
     except:
         equation.set(" error ")
         expression = ""
